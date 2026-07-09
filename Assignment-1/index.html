@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karan Singh Mertiya - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header: Logo is on the left, Social Links on the right -->
+    <header>
+        <div class="logo">Karan Singh Mertiya</div>
+        <div class="social-links">
+            <a href="#" target="_blank">LinkedIn</a>
+            <a href="#" target="_blank">GitHub</a>
+            <a href="#" target="_blank">Portfolio</a>
+        </div>
+    </header>
+
+    <!-- Menubar -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Layout Container -->
+    <div class="container">
+        
+        <!-- Sidebar (Custom Data) -->
+        <aside>
+            <h3>Professional Profile</h3>
+            <ul>
+                <li>
+                    <strong>Education</strong>
+                    B.Tech ECE, MBM University (2023-2027) | CGPA: 7.00
+                </li>
+                <li>
+                    <strong>Focus Areas</strong>
+                    LLM inference, quantisation, and hardware-aware machine learning.
+                </li>
+                <li>
+                    <strong>Core Skills</strong>
+                    Python, C++, CUDA, PyTorch, Systolic Arrays, Verilog.
+                </li>
+                <li>
+                    <strong>Experience</strong>
+                    DRDO Intern (June-July 2025) - Aircraft routing simulations.
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Main Content (Three Boxes) -->
+        <main>
+            <h2>Research & Technical Projects</h2>
+            <div class="cards-container">
+                
+                <!-- Box 1 -->
+                <div class="card">
+                    <img src="https://via.placeholder.com/400x200/2c3e50/ffffff?text=LLM+Quantisation" alt="LLM Quantisation">
+                    <div class="card-content">
+                        <h4>Mixed-Precision Quantisation</h4>
+                        <p>Designed Variable Bit Floating-Point (vBFP) quantisation on Llama-3-8B. Implemented a custom INT4 CUDA GEMV kernel, achieving 15.5 tokens/s inference on dual T4 GPUs.</p>
+                    </div>
+                </div>
+
+                <!-- Box 2 -->
+                <div class="card">
+                    <img src="https://via.placeholder.com/400x200/2980b9/ffffff?text=ASIC+NPU" alt="ASIC NPU">
+                    <div class="card-content">
+                        <h4>ASIC NPU Co-Design</h4>
+                        <p>Built a 256-PE 16x16 output-stationary systolic array in Verilog. Reduced arithmetic hardware area by 60% using shift-add APoT trees for multiplier-free inference.</p>
+                    </div>
+                </div>
+
+                <!-- Box 3 -->
+                <div class="card">
+                    <img src="https://via.placeholder.com/400x200/16a085/ffffff?text=Git+Chat" alt="Git Chat Assistant">
+                    <div class="card-content">
+                        <h4>Git Chat AI Assistant</h4>
+                        <p>Developed a full-stack AI assistant using Retrieval-Augmented Generation (RAG) to enable conversational understanding across large multi-file source-code repositories.</p>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Karan Singh Mertiya. Jodhpur, Rajasthan, India. Designed for Web Development Assignment.</p>
+    </footer>
+
+</body>
+</html>

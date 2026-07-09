@@ -1,0 +1,34 @@
+// Question 2: Calculator function
+function calculator(num1, num2, operation) {
+    let result;
+    
+    switch (operation) {
+        case '+':
+        case 'add':
+            result = num1 + num2;
+            break;
+        case '-':
+        case 'subtract':
+            result = num1 - num2;
+            break;
+        case '*':
+        case 'multiply':
+            result = num1 * num2;
+            break;
+        case '/':
+        case 'divide':
+            if (num2 === 0) {
+                return "Error: Cannot divide by zero.";
+            }
+            result = num1 / num2;
+            break;
+        default:
+            return "Error: Invalid operation.";
+    }
+    
+    return result;
+}
+
+// Example usage:
+console.log(calculator(10, 5, '+')); // Output: 15
+console.log(calculator(10, 5, 'multiply')); // Output: 50

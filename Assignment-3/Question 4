@@ -1,0 +1,22 @@
+//Count consonants and vowels in a string
+
+function countVowelsAndConsonants(str) {
+    let vowelsCount = 0;
+    let consonantsCount = 0;
+    
+    // Convert to lowercase and remove any non-alphabet characters (spaces, punctuation)
+    let cleanStr = str.toLowerCase().replace(/[^a-z]/g, '');
+
+    for (let char of cleanStr) {
+        if (/[aeiou]/.test(char)) {
+            vowelsCount++;
+        } else {
+            consonantsCount++;
+        }
+    }
+    
+    return { vowels: vowelsCount, consonants: consonantsCount };
+}
+
+let testString = "This is a JavaScript assignment with more than twenty characters.";
+console.log(countVowelsAndConsonants(testString));

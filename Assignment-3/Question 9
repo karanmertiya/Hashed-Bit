@@ -1,0 +1,14 @@
+//Count the number of words in a paragraph
+
+function countWords(paragraph) {
+    // .trim() removes leading/trailing spaces
+    // .split(/\s+/) splits by one or more whitespace characters
+    // .filter ensures empty strings aren't counted
+    let words = paragraph.trim().split(/\s+/).filter(word => word.length > 0);
+    
+    return words.length;
+}
+
+let para = "  This is a   sample paragraph to test   word count.  ";
+console.log(countWords(para)); 
+// Output: 9

@@ -1,0 +1,35 @@
+//Calculate the average of subjects inside an Object/Array structure
+
+const studentData = [
+    {
+        student1: { subject1: 44, subject2: 56, subject3: 87, subject4: 97, subject5: 37 }
+    },
+    {
+        student2: { subject1: 44, subject2: 56, subject3: 87, subject4: 97, subject5: 37 }
+    },
+    {
+        student3: { subject1: 44, subject2: 56, subject3: 87, subject4: 97, subject5: 37 }
+    }
+];
+
+const studentAverages = studentData.map(studentObj => {
+    // Get the key name (e.g., 'student1')
+    const studentName = Object.keys(studentObj)[0]; 
+    
+    // Get the object containing the subjects
+    const subjects = studentObj[studentName]; 
+    
+    // Extract just the numbers using Object.values
+    const scores = Object.values(subjects); 
+    
+    // Calculate sum and average
+    const total = scores.reduce((sum, score) => sum + score, 0);
+    const average = total / scores.length;
+    
+    // Return the new formatted object
+    return {
+        [studentName]: { average: average }
+    };
+});
+
+console.log(JSON.stringify(studentAverages, null, 4));

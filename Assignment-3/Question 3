@@ -1,0 +1,11 @@
+//Transform 'INDIA' to 'INDONESIA' using array.splice
+
+let string = 'INDIA';
+let arr = string.split(''); // Convert string to array: ['I', 'N', 'D', 'I', 'A']
+
+// At index 3, remove 2 elements ('I', 'A') and insert 'O', 'N', 'E', 'S', 'I', 'A'
+arr.splice(3, 2, 'O', 'N', 'E', 'S', 'I', 'A');
+
+let newString = arr.join(''); // Join back into a string
+console.log(newString); 
+// Output: 'INDONESIA'

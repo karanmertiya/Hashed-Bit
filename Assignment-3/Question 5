@@ -1,0 +1,9 @@
+//Replace a wrong word with a correct word
+
+function correctfn(string, wrong, correct) {
+    // new RegExp(wrong, 'gi') ensures all instances are replaced and it's case-insensitive
+    return string.replace(new RegExp(wrong, 'gi'), correct);
+}
+
+let sentence = "I am writing some badcode. This badcode needs fixing.";
+console.log(correctfn(sentence, "badcode", "good code"));

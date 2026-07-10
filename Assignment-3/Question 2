@@ -1,0 +1,9 @@
+//Reverse the order of words in a string
+
+let str = 'I love my India';
+
+// Split the string by spaces into an array, reverse the array, and join it back
+let reversedStr = str.split(' ').reverse().join(' ');
+
+console.log(reversedStr); 
+// Output: 'India my love I'

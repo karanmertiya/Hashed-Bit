@@ -1,0 +1,11 @@
+//Remove states starting with vowels using array.filter
+
+const states = [
+    "Andhra Pradesh", "Bihar", "Chhattisgarh", "Goa", 
+    "Gujarat", "Odisha", "Punjab", "Uttar Pradesh", "West Bengal"
+];
+
+// Regex /^[aeiou]/i checks if the first letter is a vowel (case-insensitive)
+const statesWithoutVowels = states.filter(state => !/^[aeiou]/i.test(state));
+
+console.log(statesWithoutVowels);

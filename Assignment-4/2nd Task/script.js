@@ -1,14 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-</head>
-<body>
-<div id="container">
-
-</div>
-
-<script>
-//Write your code here
 function createDiv(width, height, text) {
     const container = document.getElementById('container');
     const newDiv = document.createElement('div');
@@ -20,6 +9,3 @@ function createDiv(width, height, text) {
 
 // Do not change this code
 Window.createDiv = createDiv;
-</script>
-</body>
-</html>

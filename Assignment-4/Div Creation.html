@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Div Creation</title>
+    <style>
+        .container { margin-top: 20px; }
+        .dynamic-div {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dynamic Div Creation</h1>
+    <button id="createBtn">Create Div</button>
+    <div id="container" class="container"></div>
+
+    <script>
+        let counter = 1;
+        const btn = document.getElementById('createBtn');
+        const container = document.getElementById('container');
+
+        btn.addEventListener('click', () => {
+            const newDiv = document.createElement('div');
+            newDiv.className = 'dynamic-div';
+            newDiv.textContent = 'This is dynamically created div #' + counter++;
+            container.appendChild(newDiv);
+        });
+    </script>
+</body>
+</html>

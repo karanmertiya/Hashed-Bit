@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        #targetElement {
+            width: 200px;
+            height: 100px;
+            background-color: lightblue;
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+            border: 2px solid #333;
+        }
+        .controls {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dynamic CSS Manipulation</h1>
+    
+    <div class="controls">
+        <label>Change Background Color: 
+            <input type="color" id="colorPicker" value="#add8e6">
+        </label>
+        <label>Change Width (px): 
+            <input type="range" id="widthRange" min="100" max="500" value="200">
+        </label>
+        <label>Change Text Color: 
+            <input type="color" id="textColorPicker" value="#000000">
+        </label>
+    </div>
+
+    <div id="targetElement">
+        Target Element
+    </div>
+
+    <script>
+        const targetElement = document.getElementById('targetElement');
+        const colorPicker = document.getElementById('colorPicker');
+        const widthRange = document.getElementById('widthRange');
+        const textColorPicker = document.getElementById('textColorPicker');
+
+        colorPicker.addEventListener('input', (e) => {
+            targetElement.style.backgroundColor = e.target.value;
+        });
+
+        widthRange.addEventListener('input', (e) => {
+            targetElement.style.width = e.target.value + 'px';
+        });
+
+        textColorPicker.addEventListener('input', (e) => {
+            targetElement.style.color = e.target.value;
+        });
+    </script>
+</body>
+</html>

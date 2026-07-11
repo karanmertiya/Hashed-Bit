@@ -1,45 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hide Show Para</title>
-    <style>
-        #myParagraph {
-            transition: opacity 0.3s;
-            margin-top: 20px;
-            padding: 10px;
-            background-color: #f0f0f0;
-            border: 1px solid #ccc;
-        }
-        .hidden {
-            display: none;
-        }
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-    </style>
 </head>
 <body>
-    <h1>Hide/Show Paragraph</h1>
-    <button id="toggleBtn">Hide Paragraph</button>
-    <p id="myParagraph">This is the paragraph that will be hidden and shown when you click the button.</p>
+<h1>I am a headline made with HTML</h1>
+<br />
+<p id="useless-paragraph">Useless paragraph.</p>
+<br />
+<button onclick="toggleVisibility()">Toggle Button</button>
 
-    <script>
-        const btn = document.getElementById('toggleBtn');
-        const para = document.getElementById('myParagraph');
-
-        btn.addEventListener('click', () => {
-            if (para.classList.contains('hidden')) {
-                para.classList.remove('hidden');
-                btn.textContent = 'Hide Paragraph';
-            } else {
-                para.classList.add('hidden');
-                btn.textContent = 'Show Paragraph';
-            }
-        });
-    </script>
+<script>
+// your js code goes here
+function toggleVisibility() {
+    const p = document.getElementById('useless-paragraph');
+    // If not set inline, default display is block/inline.
+    // getComputedStyle could be used, but standard assignment logic:
+    if (p.style.display === 'none') {
+        p.style.display = 'block';
+    } else {
+        p.style.display = 'none';
+    }
+}
+</script>
 </body>
 </html>

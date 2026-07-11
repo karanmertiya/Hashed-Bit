@@ -1,39 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dark Theme</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            transition: background-color 0.3s, color 0.3s;
-            background-color: #ffffff;
-            color: #000000;
-            padding: 20px;
-        }
-        body.dark-mode {
-            background-color: #333333;
-            color: #ffffff;
-        }
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-    </style>
+<style>
+.day {
+    background-color: white;
+    color: black;
+}
+
+.night {
+    background-color: black;
+    color: gold;
+}
+
+.button_night {
+    background-color: darkblue;
+    color: white;
+}
+
+.button_day{
+    background-color: white;
+    color: black;
+}
+
+html, body {
+    margin: 0px;
+    height: 100%;
+}
+
+#app {
+    height: 100%;
+    padding: 10px;
+}
+</style>
 </head>
 <body>
+<div id="app" class="day">
+    <p>I am a HashedBit student, ready to become an awesome full stack developer</p>
+    <button onclick="swapTheme()" id="swap" class="button_day">Toggle theme</button>
+</div>
 
-    <h1>Dark Theme Toggle</h1>
-    <p>Click the button below to toggle between light and dark themes.</p>
-    <button id="themeToggleBtn">Toggle Theme</button>
-
-    <script>
-        const btn = document.getElementById('themeToggleBtn');
-        btn.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
-        });
-    </script>
+<script>
+function swapTheme() {
+    const app = document.getElementById('app');
+    const swap = document.getElementById('swap');
+    
+    if (app.classList.contains('day')) {
+        app.classList.remove('day');
+        app.classList.add('night');
+        swap.classList.remove('button_day');
+        swap.classList.add('button_night');
+    } else {
+        app.classList.remove('night');
+        app.classList.add('day');
+        swap.classList.remove('button_night');
+        swap.classList.add('button_day');
+    }
+}
+</script>
 </body>
 </html>

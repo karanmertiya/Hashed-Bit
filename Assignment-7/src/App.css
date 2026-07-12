@@ -1,0 +1,53 @@
+.App {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 40px;
+  background-color: #f7f9fb;
+  min-height: 100vh;
+}
+
+.title {
+  color: #1a1a1a;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+}
+
+table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  width: 90%;
+  max-width: 1000px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 15px;
+  text-align: center;
+}
+
+th {
+  background-color: #0d2c54;
+  color: white;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+td {
+  border-bottom: 1px solid #eeeeee;
+  color: #333;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+tr:nth-child(even) {
+  background-color: #f8fbfd;
+}
+
+tr:hover {
+  background-color: #edf2f7;
+}

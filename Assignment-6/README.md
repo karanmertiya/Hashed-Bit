@@ -1,16 +1,14 @@
-# React + Vite
+# React - To Do App
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+This project is a React-based To-Do List application.
 
-Currently, two official plugins are available:
+## Functionality
+- **Add Tasks**: You can type a task into the input field and click the "Add Task" button to add it to the list.
+- **Clear on Addition**: The input field is automatically cleared immediately after a successful task is added.
+- **Delete Tasks**: Each task listed has a "Delete" button next to it that removes it from the list when clicked.
+- **Ascending Order**: The entire task list is continually sorted and rendered in alphabetical ascending order automatically.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Extra UX Improvements (Bonus Credit)
+- **Enter Key Support**: You can press the `Enter` key while focused on the input field to quickly add a task without needing to reach for the mouse to click the button.
+- **Empty Task Validation**: The application intelligently prevents adding empty tasks or tasks consisting only of whitespace, keeping the list clean.
+- **Duplicate Prevention**: The application checks if a task already exists in the list and shows a helpful alert preventing the addition of exact duplicates.

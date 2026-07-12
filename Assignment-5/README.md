@@ -1,16 +1,14 @@
-# React + Vite
+# React Assignment 1 - Calculator
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+This project is a React-based calculator application built as part of Assignment 5. 
 
-Currently, two official plugins are available:
+## Functionality
+- Features two input fields for entering numeric values.
+- Includes four distinct buttons to perform basic arithmetic operations: **Addition (+)**, **Subtraction (-)**, **Multiplication (*)**, and **Division (/)**.
+- Dynamically calculates the output and displays it in a dedicated result section.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Extra UX Improvements (Bonus Credit)
+- **Divide by Zero Handling**: Added safe checks so that dividing by zero outputs a clean error message (`Error: Divide by zero`) instead of crashing or showing `Infinity`.
+- **Responsive Layout**: Designed the component with flexbox to ensure the layout remains clean and centered on any device.
+- **Visual Feedback**: Added hover transitions on the action buttons to provide immediate interactive feedback to the user.
+- **Empty State Fallback**: When no result is calculated yet, the UI neatly displays `---` rather than a blank or null space.

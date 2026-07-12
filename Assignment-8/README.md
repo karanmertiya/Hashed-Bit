@@ -1,16 +1,33 @@
-# React + Vite
+# React Assignment - Movie Booking App
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+This project is a React-based Movie Booking application built as part of Assignment 8. 
 
-Currently, two official plugins are available:
+## Pages and Functionality
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+The application uses `react-router-dom` to implement seamless navigation across four distinct pages:
 
-## React Compiler
+### 1. Home Page (`/`)
+- Displays a catalog of 16 movies.
+- Features dummy images and genres for each movie.
+- Structured neatly into a responsive **4x4 grid layout**.
+- Clicking on any movie card routes the user to that specific movie's details page.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 2. Movie Details Page (`/movie/:id`)
+- Displays the selected movie's specific details (title, genre, large image, and description).
+- Includes a prominent **Book Seat** button that takes the user to the booking form for that movie.
 
-## Expanding the Oxlint configuration
+### 3. Booking Form Page (`/book/:id`)
+- Presents a form requesting the user's **Name**, **Email**, and **Mobile Number**.
+- Form inputs are validated (marked as `required`).
+- Upon clicking Submit, the application generates a random alphanumeric Booking ID and navigates to the confirmation screen.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+### 4. Confirmation Page (`/confirmation`)
+- Displays a success message indicating the seat has been booked.
+- Shows the newly generated **Random Booking ID**.
+- Recaps the entered details: Movie Title, Name, Email, and Mobile.
+- Provides a button to return to the Home page to start over.
+
+## Running Locally
+To test this application:
+1. `npm install`
+2. `npm run dev`

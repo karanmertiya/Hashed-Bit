@@ -65,9 +65,16 @@ function calculateSum(numbers) {
     return numbers.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
 }
 
-// Testing output examples (optional, just for verification)
-console.log("Q2 Second Fruit:", getSecondFruit());
-console.log("Q4 Squared:", squareNumbers(numbersArray));
-console.log("Q5 Filtered Odds:", filterEvenNumbers(numbersArray));
-console.log("Q7 Area:", calculateArea({ width: 5, height: 10 }));
-console.log("Q10 Sum:", calculateSum(numberList));
+// Testing output examples (verification)
+console.log("Q1 Scope Difference:");
+scopeDifference();
+console.log("\nQ2 Second Fruit:", getSecondFruit());
+console.log("\nQ3 Modified Array:", modifyArray([1, 2, 3]));
+console.log("\nQ4 Squared:", squareNumbers(numbersArray));
+console.log("\nQ5 Filtered Odds:", filterEvenNumbers(numbersArray));
+console.log("\nQ6 Greet Person:");
+greetPerson(person);
+console.log("\nQ7 Area:", calculateArea({ width: 5, height: 10 }));
+console.log("\nQ8 Object Keys:", getObjectKeys({ a: 1, b: 2, c: 3 }));
+console.log("\nQ9 Merged Object:", mergeObjects({ a: 1, b: 2 }, { c: 3, d: 4 }));
+console.log("\nQ10 Sum:", calculateSum(numberList));
